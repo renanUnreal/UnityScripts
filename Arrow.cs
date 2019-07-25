@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
-
+    // velocidade da flesha
     public float m_Speed = 2000.0f;
+    // parte da flecha que fara a colisao e sera resposavel pela fisica para que ela caia com a frente mais pesada que o corpo 
+    // este item esta no PREFAB da flecha é a ponta dela
     public Transform m_Tip = null;
 
     private Rigidbody m_Rigidbody = null;
@@ -48,9 +50,8 @@ public class Arrow : MonoBehaviour
     {
         m_IsStopped = false;
         transform.parent = null;
-        
-        
-         m_Rigidbody.isKinematic = false;
+
+        m_Rigidbody.isKinematic = false;
         m_Rigidbody.useGravity = true;
         m_Rigidbody.AddForce(transform.forward * (pullValue * m_Speed));
         Destroy(gameObject, 5.0f);
@@ -73,3 +74,4 @@ public class Arrow : MonoBehaviour
 
 
 }
+
