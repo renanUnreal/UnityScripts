@@ -1,4 +1,5 @@
-﻿using System.Collections;
+
+using System.Collections;
 using UnityEngine;
 
 /*
@@ -129,7 +130,8 @@ public class Bow : MonoBehaviour
 
     private void FireArrow()
     {
-        // TODO: Call fire from arrow
+
+        m_CurrentArrow.Fire(m_PullValue);
         m_CurrentArrow = null;
     }
 
