@@ -48,7 +48,9 @@ public class Arrow : MonoBehaviour
     {
         m_IsStopped = false;
         transform.parent = null;
-
+        
+        
+         m_Rigidbody.isKinematic = false;
         m_Rigidbody.useGravity = true;
         m_Rigidbody.AddForce(transform.forward * (pullValue * m_Speed));
         Destroy(gameObject, 5.0f);
