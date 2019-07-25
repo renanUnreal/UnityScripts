@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
+
 /*
  No tutorial ele cria um sistema de Bow/Arrow que por fim a static mesh do Bow vai para o modelo do MotionController
  oque Acredito que para fazer um sistema de troca de armas como no caso estou imaginando criar um sistema de magias
