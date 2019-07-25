@@ -1,7 +1,5 @@
-
 using System.Collections;
 using UnityEngine;
-
 
 /*
  No tutorial ele cria um sistema de Bow/Arrow que por fim a static mesh do Bow vai para o modelo do MotionController
@@ -28,18 +26,29 @@ using UnityEngine;
 public class Bow : MonoBehaviour
 {
     [Header("Assets")]
+    // arrastar aqui o obj que sera a Flecha
     public GameObject m_ArrowPrefabs = null;
 
     [Header("Bow")]
     public float m_GrabThershold = 0.15f;
+    // ponto de comparação inicial ou seja onde o controle faz o pickup do socket
+    // este é umobjeto lincado na corda que define onde ela esta quando esta solta
     public Transform m_Start = null;
+    // este é um object lincado no socket da corda que define ate onde ela pode ser puxada
+    // ponto de comparação final ou seja onde o controle faz o drop do socket
     public Transform m_End = null;
+    // define o GameObject que estara sendo pego pelo controller
+    // este item esta no PREFAB do arco e um GameObject lincado na corda do arco
     public Transform m_Socket = null;
 
+    // marca o movimento da mao
     private Transform m_PullingHand = null;
+    // marca qual a flecha atual
     private Arrow m_CurrentArrow = null;
+    // define o animator de animação do arco sendo puxado
     private Animator m_Animator = null;
 
+    // veloidade de movimento da flecha solta
     private float m_PullValue = 0.0f;
 
 
